@@ -31,6 +31,5 @@ El proyecto consiste en una interfaz web estática estructurada con estándares 
 * Juan C.
 * Thalia P.
 * Enzo H.
-* Enzo H.
 
 © 2026 Contadores TEC S.A.C. Todos los derechos reservados.
