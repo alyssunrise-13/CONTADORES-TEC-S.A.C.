@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: #222;
+    line-height: 1.6;
+    background-image: url(holi.jpg)
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+header, main > section, aside.cintillo-texto, footer {
+    width: 100%;
+    padding-left: max(20px, calc((100vw - 1100px) / 2));
+    padding-right: max(20px, calc((100vw - 1100px) / 2));
+}
+
+header, footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+main > section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+aside.cintillo-texto {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    background-color: #06219b;
+    color:#ffffff;
+    text-align: center;
+}
+
+aside.cintillo-texto h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.btn-principal, .btn-secundario, .btn-enviar {
+    background: #06219b;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    color:#fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.btn-principal:hover, .btn-secundario:hover, .btn-enviar:hover {
+    background: #3463ff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: max(20px, calc((100vw - 1100px) / 2));
+    padding-right: max(20px, calc((100vw - 1100px) / 2));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(29, 44, 255, 0.041); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo img {
+    max-width: 250px;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #04007f;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.hero {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background-image: url('back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.hero-texto, .hero-formulario {
+    flex: 1;
+}
+
+.hero-texto .etiqueta {
+    display: inline-block;
+    border: 1px solid #00000048;
+    background-color: #06219b4f;
+    border-radius: 5%;
+    padding: 8px 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(25, 0, 255, 0.534), 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.hero-texto p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.hero-formulario {
+    border: 1px solid #1201ff88;
+    border-radius: 5%;
+    padding: 30px;
+    background: linear-gradient(rgba(6, 85, 255, 0.26), rgba(3, 6, 138, 0.24)), no-repeat center center / cover;
+}
+
+.hero-formulario h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.hero-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-formulario input[type="text"],
+.hero-formulario input[type="email"],
+.hero-formulario input[type="tel"],
+.hero-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0d045a4d;
+    background-color: #ced4f77a;
+    border-radius: 5%;
+    font-family: inherit;
+}
+
+.checkbox-legal {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-legal input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.btn-enviar {
+    margin-top: 15px;
+    width: max-content;
+}
+
+main > section.servicios, 
+main > section.beneficios {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.servicios, .beneficios {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.servicios-contenido {
+    flex: 1;
+    padding-top: 40px; 
+    padding-bottom: 40px;
+    padding-left: max(20px, calc((100vw - 1100px) / 2));
+    padding-right: 50px;
+}
+
+.beneficios-contenido {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: max(20px, calc((100vw - 1100px) / 2));
+    padding-left: 50px;
+}
+
+.servicios-imagen, .beneficios-imagen {
+    flex: 1;
+    display: block;
+}
+
+.servicios-imagen img, .servicios-imagen picture,
+.beneficios-imagen img, .beneficios-imagen picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios-contenido h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.lista-check {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.lista-check li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.lista-check li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    color: #555;
+}
+
+.lista-check-1 li::before {
+    content: '💰';
+    position: absolute;
+    left: 0;
+    color: #555;
+}
+
+
+.lista-check-1 {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.lista-check-1 li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.recuadro-destacado {
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.texto-cierre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: linear-gradient(rgba(0, 2, 110, 0.336), rgba(0, 0, 0, 0.7)), 
+                url('footer.jpg') center center / cover no-repeat;
+                
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(25, 0, 255, 0.452), 0 4px 12px rgba(0, 0, 0, 0.7);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "logo columnas"
+        "redes redes"
+        "copy copy";
+    row-gap: 30px;
+    column-gap: 50px;
+    align-items: start;
+}
+
+.footer-logo {
+    grid-area: logo;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    min-height: 80px;
+}
+
+.footer-columnas {
+    grid-area: columnas;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.columna h5 {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.columna ul {
+    list-style: none;
+}
+
+.columna ul li {
+    margin-bottom: 8px;
+}
+
+.columna ul li a, .contacto p, .contacto a {
+    font-size: 0.85rem;
+    color: #b0b7f3;
+}
+
+.footer-redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.footer-redes a {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color:#9dafff
+}
+
+.footer-copyright {
+    grid-area: copy;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero, .servicios, .beneficios {
+        flex-direction: column;
+    }
+
+    .hero-texto {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .hero-formulario {
+        width: 100%;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "columnas"
+            "redes"
+            "copy";
+        text-align: center;
+    }
+    
+    .footer-columnas {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-logo img {
+        margin: 0 auto;
+    }
+}
